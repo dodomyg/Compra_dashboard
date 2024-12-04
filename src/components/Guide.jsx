@@ -7,31 +7,38 @@ const Guide = () => {
   const { data, error, loading } = useSelector((state) => state.setupSteps);
   const dispatch = useDispatch();
 
-  const [index, setIndex] = useState(1);
-
-  const toggleAccordion = (i) => {
-    setIndex(i === index ? 1 : i);
-  };
+  const [index, setIndex] = useState(null);
 
   useEffect(() => {
     dispatch(getSteps());
   }, [dispatch]);
 
+  useEffect(() => {
+    if (data && data.length > 0) {
+      setIndex(data[0]?.id);
+    }
+  }, [data]);
+
+  const toggleAccordion = (i) => {
+    setIndex(i === index ? null : i);
+  };
+
   if (loading) return <Loading />;
   if (error)
     return <p className="text-center text-lg text-red-500">Error: {error}</p>;
+
   return (
     <div className="mt-10">
       <h1 className="text-2xl font-bold text-center mb-8">Setup Guide</h1>
 
       <div className="flex flex-col lg:gap-10">
         {data &&
-          data.map((item, i) => (
+          data.map((item) => (
             <div
               className={`border-2 rounded-lg p-2 ${
                 index === item?.id ? "border-black" : "border-gray-400"
               }`}
-              key={i}
+              key={item.id}
             >
               <div
                 className="flex items-center justify-between my-2 cursor-pointer"
@@ -41,11 +48,7 @@ const Guide = () => {
                 <p className="text-2xl">{index === item?.id ? "-" : "+"}</p>
               </div>
               {index === item?.id && <hr className="w-[97%] mx-auto my-1" />}
-              {index === item?.id && (
-                <p className="text-xl">
-                  {item?.ans}
-                </p>
-              )}
+              {index === item?.id && <p className="text-xl">{item?.ans}</p>}
             </div>
           ))}
       </div>
