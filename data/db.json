@@ -1,0 +1,91 @@
+{
+  "setup-steps": [
+  { "id": 1, "title": "Create your survey", "ans": "Survey created successfully using the survey builder." },
+  { "id": 2, "title": "Share your survey with your customers", "ans": "Survey shared via email and social media links." },
+  { "id": 3, "title": "Connect survey responses to your platform", "ans": "Responses connected to CRM system using API." },
+  { "id": 4, "title": "Gather survey insights", "ans": "Insights collected and analyzed using built-in analytics." }
+  ],
+  "survey-metrics": {
+    "active": 12,
+    "completed": 25,
+    "abandoned": 8
+  },
+  "surveys": [
+  {
+    "id": 1,
+    "name": "Customer Feedback Survey",
+    "status": "Active",
+    "responses": 50,
+    "createdAt": "2024-12-01"
+  },
+  {
+    "id": 2,
+    "name": "Employee Satisfaction Survey",
+    "status": "Completed",
+    "responses": 80,
+    "createdAt": "2024-11-15"
+  },
+  {
+    "id": 3,
+    "name": "Product Launch Feedback",
+    "status": "Abandoned",
+    "responses": 10,
+    "createdAt": "2024-10-10"
+  },
+  {
+    "id": 4,
+    "name": "Market Research Survey",
+    "status": "Active",
+    "responses": 60,
+    "createdAt": "2024-12-02"
+  },
+  {
+    "id": 5,
+    "name": "Website Usability Survey",
+    "status": "Completed",
+    "responses": 90,
+    "createdAt": "2024-11-20"
+  },
+  {
+    "id": 6,
+    "name": "Net Promoter Score Survey",
+    "status": "Abandoned",
+    "responses": 15,
+    "createdAt": "2024-11-05"
+  },
+  {
+    "id": 7,
+    "name": "Event Feedback Survey",
+    "status": "Active",
+    "responses": 40,
+    "createdAt": "2024-12-03"
+  },
+  {
+    "id": 8,
+    "name": "Product Satisfaction Survey",
+    "status": "Completed",
+    "responses": 120,
+    "createdAt": "2024-11-01"
+  },
+  {
+    "id": 9,
+    "name": "Customer Onboarding Survey",
+    "status": "Abandoned",
+    "responses": 5,
+    "createdAt": "2024-10-15"
+  },
+  {
+    "id": 10,
+    "name": "Service Quality Survey",
+    "status": "Active",
+    "responses": 70,
+    "createdAt": "2024-12-04"
+  }
+],
+  "plan-details": {
+    "plan": "Free",
+    "daysLeft": 10,
+    "maxSurveys": 100,
+    "surveysUsed": 37
+  }
+}
