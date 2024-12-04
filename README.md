@@ -26,7 +26,7 @@ Change to the project directory:
 cd Compra_dashboard
 ```
 
-3. Install Dependencies for the Front-End App
+### 3. Install Dependencies for the Front-End App
 Run the following command to install the necessary dependencies for the front-end app:
 ```bash
 cd Compra_dashboard
@@ -34,12 +34,12 @@ npm install
 npm install json-server
 ```
 
-4. Run the frontend
+### 4. Run the frontend
 ```bash
 npm run dev
 ```
 
-5. Run the mock server
+### 5. Run the mock server
 ```bash
 npm run mock
 
